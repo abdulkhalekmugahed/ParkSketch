@@ -1,0 +1,32 @@
+<!DOCTYPE html> <!-- Document type declaration -->
+<html> <!-- Opening HTML tag -->
+
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8" />
+    <!-- Responsive viewport settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking to an external CSS file -->
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css" />
+    {% block head %} {% endblock%} <!-- Placeholder for extending the head section -->
+    <style>
+        /* Styling for body background */
+        body {
+            background-image: url("../static/images/neurons.jpeg");
+            background-size: cover;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style> <!-- Internal CSS styling -->
+</head> <!-- Closing head tag -->
+
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            {% block body %} {% endblock%} <!-- Placeholder for extending the body section -->
+        </div>
+    </div>
+</body> <!-- Closing body tag -->
+
+</html> <!-- Closing HTML tag -->

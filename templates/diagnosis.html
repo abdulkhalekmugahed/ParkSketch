@@ -1,0 +1,37 @@
+{% extends "base_two.html" %}
+
+{% block body %} <!-- Customizing the body section -->
+
+<div>
+    <!-- Form for uploading image -->
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">Upload image</label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg" />
+    </form>
+
+    <!-- Image section with preview and result button -->
+    <div class="image-section" style="display: none">
+        <!-- Image preview area -->
+        <div class="img-preview">
+            <div id="imagePreview"></div>
+        </div>
+
+        <div>
+            <!-- Button to view result -->
+            <button type="button" class="btn btn-primary btn-lg" id="btn-predict">
+                View result
+            </button>
+        </div>
+    </div>
+
+    <!-- Loader element for indicating processing -->
+    <div class="loader" style="display: none"></div>
+
+    <!-- Result display area -->
+    <h3 id="result">
+        <!-- Placeholder for displaying result -->
+        <span> </span>
+    </h3>
+</div>
+
+{% endblock %}

@@ -1,0 +1,77 @@
+<!DOCTYPE html> <!-- Document type declaration -->
+<html lang="en"> <!-- Opening HTML tag with language attribute -->
+
+<head>
+    <meta charset="UTF-8" /> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive viewport settings -->
+    <title>Diagnosis | ParkSketch</title> <!-- Title of the page -->
+    <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon" /> <!-- Link to the favicon -->
+    <!-- External script dependencies -->
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- External CSS stylesheets -->
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/diagnosis.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head> <!-- Closing head tag -->
+
+<body>
+    <!-- Top section of the page -->
+    <div class="top-image">
+        <!-- Header section with flex layout -->
+        <header class="flex">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#">Park<span style="color: #7731d8">Sketch</span></a>
+            </div>
+            <div>
+                <!-- Welcome message and logout button -->
+                <a class="welcome">Welcome, {{name}}!</a>
+                <button class="log-out" type="submit" form="form1" value="Submit">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out
+                </button>
+                <form action="{{ url_for('logout') }}" id="form1" method="get"></form> <!-- Logout form -->
+            </div>
+        </header>
+        <!-- Main content section -->
+        <section class="content">
+            <!-- Title and subtitle -->
+            <h1 class="title">
+                Early Diagnosis of Parkinson's Disease Using Hand-Drawn Images
+            </h1>
+            <h2 class="quote">Prevention is Better Than Cure.</h2>
+            <!-- Note for users -->
+            <h3 class="note">
+                Note: Please upload a hand-drawn spiral or wave on a white sheet.
+            </h3>
+            <div class="container">
+                <center>
+                    <div id="content">
+                        {% block body %} {% endblock%} <!-- Placeholder for extending the body section -->
+                </center>
+            </div>
+        </section> <!-- Closing content section -->
+
+    </div> <!-- Closing top-image section -->
+    <!-- Footer section -->
+    <footer class="footer">
+        <!-- Copyright notice -->
+        <p class="footer-title">&copy; Copyright 2024 <span
+                style="color: #fb01c3; font-weight: bold; text-shadow: 1px 1px 2px black;">Park</span><span
+                style="color: #7731D8; font-weight: bold; text-shadow: 1px 1px 2px black;">Sketch</span>. All rights
+            reserved.
+        </p>
+        <!-- Social media icons -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/abdulkhalekmugahed"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/abdulkhalekmugahed"> <i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer> <!-- Closing footer section -->
+
+    <script type="text/javascript" src="../static/js/main.js"></script> <!-- External JavaScript file -->
+
+</body> <!-- Closing body tag -->
+
+</html> <!-- Closing HTML tag -->

@@ -1,0 +1,56 @@
+{% extends "base_one.html" %}
+
+{% block head %} <!-- Customizing the head section -->
+<title>Sign Up | ParkSketch</title> <!-- Setting the title of the page -->
+{% endblock %}
+
+{% block body %} <!-- Customizing the body section -->
+
+<a href="/">
+    <!-- Inactive tab title for sign-in -->
+    <h2 class="inactive underlineHover">Sign in</h2>
+</a>
+<!-- Active tab title for sign-up -->
+<h2 class="active">Sign up</h2>
+
+<!-- Image for logo icon -->
+<div class="fadeIn first">
+    <img src="../static/images/logo.png" id="icon" alt="ParkSketch logo " />
+</div>
+
+<!-- Sign up Form -->
+<form action="{{ url_for('register') }}" method="POST" onsubmit="return validateForm()">
+    <!-- Name input -->
+    <input type="text" id="name" class="fadeIn second" name="name" placeholder="Name" />
+    <!-- Email input -->
+    <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email" />
+    <!-- Password input -->
+    <input type="password" id="password" class="fadeIn third" name="pass" placeholder="Password" />
+    <!-- Button to toggle password visibility -->
+    <input type="button" onclick="togglePasswordVisibility()" value="Show password" />
+    <!-- Submit button for sign-up -->
+    <input type="submit" class="fadeIn fourth" value="Sign up" />
+</form>
+<!-- Check for any error message -->
+{% if error %}
+<div class="fadeIn first">
+    <!-- Display error message if exists -->
+    <p>{{ error }}</p>
+</div>
+{% endif %}
+
+<!-- JavaScript function to toggle password visibility -->
+<script>
+    function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        } else {
+            passwordInput.type = "password";
+        }
+    }
+</script>
+<!-- Including signup.js file -->
+<script src="../static/js/signup.js"></script>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base_one.html" %}
+
+{% block head %} <!-- Customizing the head section -->
+<title>ParkSkecth: Log In or Sign Up</title> <!-- Setting the title of the page -->
+{% endblock %}
+
+{% block body %} <!-- Customizing the body section -->
+
+<!-- Active tab title -->
+<h2 class="active">Sign in</h2>
+<a href="{{ url_for('signup') }}">
+    <!-- Inactive tab title -->
+    <h2 class="inactive underlineHover">Sign up</h2>
+</a>
+
+<!-- Image for logo icon -->
+<div class="fadeIn first">
+    <img src="../static/images/logo.png" id="icon" alt="ParkSketch logo " />
+</div>
+<!-- Login form -->
+<form action="{{ url_for('result') }}" method="POST" onsubmit="return validateLoginForm()">
+    <!-- Email input -->
+    <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email" />
+    <!-- Password input -->
+    <input type="password" id="password" class="fadeIn third" name="pass" placeholder="Password" />
+    <!-- Submit button -->
+    <input type="submit" class="fadeIn fourth" value="Log in" />
+</form>
+
+<!-- Check for any error message -->
+{% if error %}
+<div class="fadeIn first">
+    <!-- Display error message if exists -->
+    <p color="red">{{ error }}</p>
+</div>
+{% endif %}
+
+<div id="formFooter">
+    <!--Redirect reset_password page-->
+    <a class="underlineHover" href="{{ url_for('reset_password') }}">Forgot password?</a>
+</div>
+
+<!-- Including login.js file -->
+<script src="../static/js/login.js"></script>
+{% endblock %}
