@@ -16,13 +16,13 @@ app.secret_key = "0101010"
 
 # Configuration for Firebase
 config = {
-    'apiKey': 'AIzaSyDZo472sANtS8I46z0_AxGMm7CTOMmoesM',
-    'authDomain': 'parksketch-01.firebaseapp.com',
-    'projectId': 'parksketch-01',
-    'storageBucket': 'parksketck-01.appspot.com',
-    'messagingSenderId': '428838688775',
-    'appId': '1:428838688775:web:6af1acdb251207ef5372a2',
-    'databaseURL': 'https://parksketch-01-default-rtdb.firebaseio.com'
+    'apiKey': '',
+    'authDomain': '',
+    'projectId': '',
+    'storageBucket': '',
+    'messagingSenderId': '',
+    'appId': '',
+    'databaseURL': ''
 }
 
 # Initialize Firebase
