@@ -1,4 +1,4 @@
-# ParkSketch: Early Diagnosis of Parkinson’s Disease Using Hand-Drawn Images
+# ParkSketch: Early Diagnosis of Parkinson’s Disease Using Hand-Drawn Images (Graduation Project)
 
 **ParkSketch** is an AI-powered web application designed to diagnose Parkinson's Disease (PD) through the analysis of hand-drawn images, specifically spirals and waves. Leveraging cutting-edge deep learning techniques, including convolutional neural networks (CNNs) and transfer learning, this project aims to facilitate early diagnosis, significantly enhancing patient care and management.
 
@@ -296,7 +296,10 @@ ParkSketch has achieved promising results in differentiating between Parkinson's
 
 ## Project Demo
 
-Check out the live demo of the project [here](https://drive.google.com/file/d/1NQCo8AFtEwljV1grdsg_1j_OAdURsjRj/view?usp=sharing#).  
+Here’s a video demonstration of **ParkSketch** in action:
+
+https://github.com/user-attachments/assets/f8562211-da8b-40b7-a7f5-c308684cbde3
+
 
 ## License
 
